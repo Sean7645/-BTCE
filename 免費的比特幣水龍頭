@@ -1,0 +1,15 @@
+呼應“贏在比特幣從Yoursite wallet.la”;
+
+$ R =蘭特（0,100）;
+$概率= 50;
+$查詢=“鍵= [API KEY]和行動= genvoucher及金額= [贏額]引腳= [PIN]”;
+$符號=散（“SHA256”，$查詢“和SKEY =”[密鑰]）;
+$ URL =“htt​​ps://wallet.la/apiv1?$query&sign=$sign”;
+如果（$ R> $概率）{
+        $ VOU =的file_get_contents（$網址）;
+        $ ARR =爆炸（“_”，$ VOU）;
+        迴聲“恭喜！您wallet.la優惠券代碼為“$改編[1]。
+}其他{
+        
+   呼應“不幸運？下一次來這裡'！;
+}
